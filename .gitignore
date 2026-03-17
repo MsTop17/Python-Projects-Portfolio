@@ -1,0 +1,11 @@
+echo ".venv/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.mp4" >> .gitignore
+# 1. Remove everything from the 'tracking' list (this doesn't delete your files)
+git rm -r --cached .
+
+# 2. Add everything back (this time Git will look at your .gitignore and skip the bad stuff)
+git add .
+
+# 3. Commit the change
+git commit -m "Cleaned up repo and applied .gitignore"
